@@ -1,0 +1,18 @@
+require 'rake/testtask'
+require 'rubygems'
+require 'xcider'
+require 'xcider/xcodebuild'
+
+desc "Run tests"
+task :default => :test
+
+desc "Test task"
+task :test do
+
+    builder=Xcider::Xcodebuild.new.tap do |b|
+	b.dry_run=TRUE
+    end
+    builder.build
+    puts "Last executed command: #{builder.last_command_string}"
+
+end

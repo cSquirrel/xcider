@@ -1,5 +1,7 @@
-class Xcider 
-  def self.hi
-    puts "Hello world!"
-  end
+
+module Xcider
+
+  autoload :Xcodebuild,    'xcider/xcodebuild'
+  autoload :Xcodeselect,   'xcider/xcodeselect'
+
 end
