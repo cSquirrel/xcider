@@ -1,0 +1,5 @@
+class Xcider 
+  def self.hi
+    puts "Hello world!"
+  end
+end
